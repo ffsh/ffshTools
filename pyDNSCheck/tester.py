@@ -17,7 +17,9 @@ class DNS_checker():
 
 
         for domain in sorted(targets["Targets"]):
-            resolver.query(domain, "A")
+            response = resolver.query(domain, "A")
+            for rdata in response:
+                print(rdata)
 
         if self.consistent():
             return True
