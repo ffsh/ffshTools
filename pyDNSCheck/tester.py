@@ -17,7 +17,11 @@ class DNS_checker():
 
 
         for domain in sorted(targets["Targets"]):
-            response = resolver.query(domain, "A")
+            try:
+                response = resolver.query(domain, "A")
+            except dns.resolver.NoAnswer:
+                pass
+
             for rdata in response:
                 print(rdata)
 
