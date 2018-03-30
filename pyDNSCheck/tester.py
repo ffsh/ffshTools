@@ -22,7 +22,7 @@ class DNS_checker():
             except dns.resolver.NoAnswer:
                 pass
 
-            for rdata in response:
+            for rdata in response.rrset.items:
                 print(rdata)
 
         if self.consistent():
