@@ -14,9 +14,9 @@ class DNS_checker():
             if value["active"] is True:
                 test_resolvers[value["IPv4"]] = name
 
-        for name in test_resolvers:
-            resolver.nameservers = [name]
-            for domain in sorted(targets["Targets"]):
+        for domain in sorted(targets["Targets"]):
+            for name in test_resolvers:
+                resolver.nameservers = [name]
                 try:
                     response = resolver.query(domain, "A")
                     for rdata in response:
