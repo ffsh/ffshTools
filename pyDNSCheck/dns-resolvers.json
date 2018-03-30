@@ -1,0 +1,64 @@
+{
+    "Servers": {
+        "Barnitz":{
+            "IPv4": "10.144.48.1",
+            "IPv6": "fddf:0bf7:80::48:1",
+            "active": true
+        },
+        "Beste":{
+            "IPv4": "10.144.64.1",
+            "IPv6": "fddf:0bf7:80::64:1",
+            "active": true
+        },
+        "Bille":{
+            "IPv4": "10.144.80.1",
+            "IPv6": "fddf:0bf7:80::80:1",
+            "active": false
+        },
+        "Brunsbach":{
+            "IPv4": "10.144.96.1",
+            "IPv6": "fddf:0bf7:80::96:1",
+            "active": false
+        },
+        "Heilsau":{
+            "IPv4": "10.144.112.1",
+            "IPv6": "fddf:0bf7:80::112:1",
+            "active": false
+        },
+        "Hopfenbach":{
+            "IPv4": "10.144.128.1",
+            "IPv6": "fddf:0bf7:80::128:1",
+            "active": true
+        },
+        "Krummbach":{
+            "IPv4": "10.144.144.1",
+            "IPv6": "fddf:0bf7:80::144:1",
+            "active": true
+        },
+        "Piepenbek":{
+            "IPv4": "10.144.160.1",
+            "IPv6": "fddf:0bf7:80::160:1",
+            "active": false
+        },
+        "Strusbek":{
+            "IPv4": "10.144.176.1",
+            "IPv6": "fddf:0bf7:80::176:1",
+            "active": false
+        },
+        "Sylsbek":{
+            "IPv4": "10.144.192.1",
+            "IPv6": "fddf:0bf7:80::192:1",
+            "active": false
+        },
+        "Trave":{
+            "IPv4": "10.144.208.1",
+            "IPv6": "fddf:0bf7:80::208:1",
+            "active": true
+        },
+        "Viehbach":{
+            "IPv4": "10.144.224.1",
+            "IPv6": "fddf:0bf7:80::224:1",
+            "active": true
+        }
+    }
+}
