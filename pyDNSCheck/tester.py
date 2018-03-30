@@ -23,7 +23,7 @@ class DNS_checker():
                         print(test_resolvers[name], rdata)
                 except dns.resolver.NoAnswer:
                     print("Error")
-                    print(test_resolvers[name], dir(dns.resolver.NoAnswer))
+                    print(test_resolvers[name], dns.resolver.NoAnswer.msg)
 
         if self.consistent():
             return True
