@@ -20,7 +20,7 @@ class DNS_checker():
             try:
                 response = resolver.query(domain, "A")
             except dns.resolver.NoAnswer:
-                pass
+                print(dict(dns.resolver.NoAnswer))
 
             for rdata in response.rrset.items:
                 print(rdata)
