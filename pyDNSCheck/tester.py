@@ -19,12 +19,11 @@ class DNS_checker():
             for domain in sorted(targets["Targets"]):
                 try:
                     response = resolver.query(domain, "A")
+                    for rdata in response:
+                        print(rdata)
                 except dns.resolver.NoAnswer:
                     print("Error")
                     print(dict(dns.resolver.NoAnswer))
-
-        for rdata in response.rrset.items:
-            print(rdata)
 
         if self.consistent():
             return True
