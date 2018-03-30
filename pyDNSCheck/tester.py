@@ -20,10 +20,10 @@ class DNS_checker():
                 try:
                     response = resolver.query(domain, "A")
                     for rdata in response:
-                        print(name, rdata)
+                        print(test_resolvers[name], rdata)
                 except dns.resolver.NoAnswer:
                     print("Error")
-                    print(name, dir(dns.resolver.NoAnswer))
+                    print(test_resolvers[name], dir(dns.resolver.NoAnswer))
 
         if self.consistent():
             return True
