@@ -12,16 +12,16 @@ class DNS_checker():
         test_resolvers = {}
         for name, value in sorted(resolvers["Servers"].items()):
             if value["active"] is True:
-                test_resolvers[value["IPv4"]] = name
+                test_resolvers[value["IPv6"]] = name
         for domain in sorted(targets["Targets"]):
-            for name in test_resolvers:
+            print("Testing Domain {}:".format(domain))
+            for name in sorted(test_resolvers):
                 resolver.nameservers = [name]
                 try:
-                    response = resolver.query(domain, "A")
+                    response = resolver.query(domain, "AAAA")
                     for rdata in response:
                         print(test_resolvers[name], rdata, sep=": ")
                 except dns.resolver.NoAnswer:
-                    print("Error")
                     print(test_resolvers[name], dns.resolver.NoAnswer.msg, sep=": ")
 
         if self.consistent():
