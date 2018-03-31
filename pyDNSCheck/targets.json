@@ -1,6 +1,7 @@
 {
     "Targets": [
         "freifunk-suedholstein.de",
-        "map.freifunk-suedholstein.de"
+        "map.freifunk-suedholstein.de",
+        "tiles.freifunk-suedholstein.de"
     ]
 }
