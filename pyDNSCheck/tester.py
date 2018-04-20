@@ -5,6 +5,7 @@ Checks if dns servers in the Freifunk Südholstein Network are consistent
 import json
 import dns.resolver
 import dnsresult
+from terminaltables import AsciiTable
 
 class DnsChecker():
     """Query each server defined in self.dns_resolvers for each domain in self.targets"""
@@ -26,12 +27,23 @@ class DnsChecker():
                     response = resolver.query(domain, record)
                     # get the query result
                     for ip_address in response:
-                        dnsresults.add(domain, test_resolvers[name], ip_address)
+                        dnsresults.add(domain, test_resolvers[name], str(ip_address))
 
                 except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN):
                     # No answer or no entry
                     dnsresults.add(domain, test_resolvers[name], "None")
-        print(dnsresults.get_all())
+        return dnsresults.get_all()
+
+    def display (self, result):
+        """display all the results"""
+        table = [
+            ["Domain", "IP", "Hosts"]
+        ]
+        for domain, value in result.items():
+            for ip_address, hosts in value.items():
+                table.append([domain, ip_address, hosts])
+        ascii_table = AsciiTable(table)
+        print(ascii_table.table)
 
 
 
@@ -44,7 +56,8 @@ def main():
         resolvers = json.load(file)
 
     checker = DnsChecker()
-    checker.querry(resolvers, targets)
+    result = checker.querry(resolvers, targets)
+    checker.display(result)
 
 if __name__ == '__main__':
     main()

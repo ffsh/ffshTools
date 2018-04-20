@@ -5,11 +5,12 @@ class DNSResult():
     """ Holds DNS Resulsts """
 
     def __init__(self):
-        self.results = {
-            "map.freifunk-suedholstein.de": {
-                "1.2.3.4": ["viehbach", "hopfenbach"]
-            }
-        }
+        #self.results = {
+        #   "map.freifunk-suedholstein.de": {
+        #        "1.2.3.4": ["viehbach", "hopfenbach"]
+        #    }
+        #}
+        self.results = {}
 
     def add(self, domain, hostname, ip_address):
         """ add a entry to the dns results """
