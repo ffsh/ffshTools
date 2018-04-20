@@ -41,7 +41,10 @@ class DnsChecker():
         ]
         for domain, value in result.items():
             for ip_address, hosts in value.items():
-                table.append([domain, ip_address, hosts])
+                if ip_address != "None":
+                    table.append([domain, ip_address, str(hosts)])
+                else:
+                    table.append([domain, '\033[0;31m'+ip_address+'\033[0m', str(hosts)])
         ascii_table = AsciiTable(table)
         print(ascii_table.table)
 
