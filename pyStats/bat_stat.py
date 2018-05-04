@@ -37,14 +37,15 @@ class Batman():
         for line in cmd.stdout:
             line = self.remove_control_characters(line.decode("utf-8"))
             result = re.search(pattern, line)
-            self.batman["fields"][result.group(1) ] = result.group(2)
+            self.batman["fields"][result.group(1)] = result.group(2)
 
     def send(self):
         """send data to infuxdb"""
         # pp = pprint.PrettyPrinter(indent=4)
         # pp.pprint(self.batman)
+        json_body = [].append(self.batman)
         client = InfluxDBClient('localhost', 8086, '', '', 'ffsh')
-        client.write_points(self.batman)
+        client.write_points(json_body)
 
 
 def main():
