@@ -4,7 +4,7 @@ import subprocess
 import argparse
 import time
 import re
-# import pprint
+import pprint
 import unicodedata
 from influxdb import InfluxDBClient
 
@@ -41,11 +41,10 @@ class Batman():
 
     def send(self):
         """send data to infuxdb"""
-        # pp = pprint.PrettyPrinter(indent=4)
-        # pp.pprint(self.batman)
-        json_body = [].append(self.batman)
+        #pp = pprint.PrettyPrinter(indent=4)
+        #pp.pprint(json_body)
         client = InfluxDBClient('localhost', 8086, '', '', 'ffsh')
-        client.write_points(json_body)
+        client.write_points(self.batman)
 
 
 def main():
