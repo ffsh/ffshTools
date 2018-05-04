@@ -2,7 +2,7 @@
 """Adapter batctl influxdb"""
 import subprocess
 import argparse
-import time
+from datetime import datetime
 import re
 import pprint
 import unicodedata
@@ -55,7 +55,8 @@ class Batman():
 
 def main():
     """start all the things"""
-    batman = Batman(ARGS.host, time.time())
+    current_time = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+    batman = Batman(ARGS.host, current_time)
     batman.pase()
     batman.send()
 
