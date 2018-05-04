@@ -37,7 +37,7 @@ class Batman():
         for line in cmd.stdout:
             line = self.remove_control_characters(line.decode("utf-8"))
             result = re.search(pattern, line)
-            self.batman["fields"][result.group(1)] = result.group(2)
+            self.batman["fields"][result.group(1)] = str(result.group(2))
 
     def send(self):
         """send data to infuxdb"""
