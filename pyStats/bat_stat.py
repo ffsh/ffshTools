@@ -55,7 +55,7 @@ class Batman():
 
 def main():
     """start all the things"""
-    batman = Batman(ARGS.host, int(time.time()))
+    batman = Batman(ARGS.host, time.time())
     batman.pase()
     batman.send()
 
