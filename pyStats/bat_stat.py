@@ -20,9 +20,9 @@ class Batman():
         self.batman = {
             "measurement": "batman",
             "tags": {
-                "host": host
+                "host": str(host)
             },
-            "time": timestamp,
+            "time": str(timestamp),
             "fields": {}
             }
     @staticmethod
