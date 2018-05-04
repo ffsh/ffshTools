@@ -18,13 +18,19 @@ class Batman():
     """does batman stuff"""
     def __init__(self, host, timestamp):
         self.batman = {
-            "measurement": "batman",
             "tags": {
                 "host": str(host)
-            },
-            "time": str(timestamp),
-            "fields": {}
-            }
+                },
+            "points": [
+                {
+                    "measurement": "batman",
+                    "fields": {
+                        },
+                    "time": str(timestamp),
+                }
+            ]
+        }
+
     @staticmethod
     def remove_control_characters(string):
         """remove control_characters"""
@@ -37,7 +43,7 @@ class Batman():
         for line in cmd.stdout:
             line = self.remove_control_characters(line.decode("utf-8"))
             result = re.search(pattern, line)
-            self.batman["fields"][result.group(1)] = str(result.group(2))
+            self.batman["points"][0]["fields"][result.group(1)] = str(result.group(2))
 
     def send(self):
         """send data to infuxdb"""
