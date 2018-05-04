@@ -42,9 +42,9 @@ class Batman():
     def send(self):
         """send data to infuxdb"""
         #pp = pprint.PrettyPrinter(indent=4)
-        #pp.pprint(json_body)
+        #pp.pprint(self.batman)
         client = InfluxDBClient('localhost', 8086, '', '', 'ffsh')
-        client.write_points(self.batman)
+        client.write(self.batman)
 
 
 def main():
