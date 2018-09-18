@@ -9,6 +9,9 @@
         ["firmware.freifunk-stormarn.de", "AAAA"],
         ["firmware.stormarn.freifunk.net", "AAAA"],
         ["firmware.lauenburg.freifunk.net", "AAAA"],
-        ["firmware.freifunk-lauenburg.de", "AAAA"]
+        ["firmware.freifunk-lauenburg.de", "AAAA"],
+        ["firmware.freifunk-suedholstein.de", "AAAA"],
+	["fw.ffshev.de", "AAAA"],
+	["firmware.ffshev.de", "AAAA"]
     ]
 }

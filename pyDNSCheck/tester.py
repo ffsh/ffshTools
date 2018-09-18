@@ -29,7 +29,7 @@ class DnsChecker():
                     for ip_address in response:
                         dnsresults.add(domain, test_resolvers[name], str(ip_address))
 
-                except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN):
+                except (dns.resolver.NoAnswer, dns.resolver.NXDOMAIN, dns.resolver.NoNameservers, dns.exception.Timeout):
                     # No answer or no entry
                     dnsresults.add(domain, test_resolvers[name], "None")
         return dnsresults.get_all()
