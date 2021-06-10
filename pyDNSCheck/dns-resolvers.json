@@ -13,27 +13,27 @@
         "Bille":{
             "IPv4": "10.144.80.1",
             "IPv6": "fddf:0bf7:80::80:1",
-            "active": false
+            "active": true
         },
         "Brunsbach":{
             "IPv4": "10.144.96.1",
             "IPv6": "fddf:0bf7:80::96:1",
-            "active": false
+            "active": true
         },
         "Heilsau":{
             "IPv4": "10.144.112.1",
             "IPv6": "fddf:0bf7:80::112:1",
-            "active": false
+            "active": true
         },
         "Hopfenbach":{
             "IPv4": "10.144.128.1",
             "IPv6": "fddf:0bf7:80::128:1",
-            "active": true
+            "active": false
         },
         "Krummbach":{
             "IPv4": "10.144.144.1",
             "IPv6": "fddf:0bf7:80::144:1",
-            "active": true
+            "active": false
         },
         "Piepenbek":{
             "IPv4": "10.144.160.1",
@@ -48,7 +48,7 @@
         "Sylsbek":{
             "IPv4": "10.144.192.1",
             "IPv6": "fddf:0bf7:80::192:1",
-            "active": false
+            "active": true
         },
         "Trave":{
             "IPv4": "10.144.208.1",

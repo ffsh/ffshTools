@@ -1,7 +1,6 @@
 {
     "Targets": [
         ["map.freifunk-suedholstein.de", "AAAA"],
-        ["dev.freifunk-suedholstein.de", "AAAA"],
         ["tiles.freifunk-suedholstein.de", "AAAA"],
         ["update.freifunk-stormarn.de", "AAAA"],
         ["update.stormarn.freifunk.net", "AAAA"],
@@ -11,7 +10,7 @@
         ["firmware.lauenburg.freifunk.net", "AAAA"],
         ["firmware.freifunk-lauenburg.de", "AAAA"],
         ["firmware.freifunk-suedholstein.de", "AAAA"],
-	["fw.ffshev.de", "AAAA"],
-	["firmware.ffshev.de", "AAAA"]
+	    ["fw.ffshev.de", "AAAA"],
+	    ["firmware.ffshev.de", "AAAA"]
     ]
 }

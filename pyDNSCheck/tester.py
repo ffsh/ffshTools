@@ -24,7 +24,7 @@ class DnsChecker():
             for name in sorted(test_resolvers):
                 resolver.nameservers = [name]
                 try:
-                    response = resolver.query(domain, record)
+                    response = resolver.resolve(domain, record)
                     # get the query result
                     for ip_address in response:
                         dnsresults.add(domain, test_resolvers[name], str(ip_address))
