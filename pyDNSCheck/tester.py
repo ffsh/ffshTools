@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!python3
 """
 Checks if dns servers in the Freifunk Südholstein Network are consistent
 """
